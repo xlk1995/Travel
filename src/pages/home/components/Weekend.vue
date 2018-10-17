@@ -1,8 +1,14 @@
 <template>
   <div>
-    <div class="title">周末去哪儿</div>
-      <ul class=" border-bottom ">
-        <li class="item" v-for="item of list" :key="item.id">
+    <div class="title">热销推荐</div>
+      <ul class="border-bottom">
+        <router-link
+        tag="li"
+        class="item"
+        v-for="item of list"
+        :key="item.id"
+        :to="'/detail/'+ item.id"
+        >
           <div class="item-img-wrapper">
             <img :src="item.imgUrl" class="item-img">
           </div>
@@ -10,7 +16,7 @@
             <p class="item-title">{{item.title}}</p>
             <p class="item-desc">{{item.desc}}</p>
           </div>
-        </li>
+        </router-link>
       </ul>
   </div>
 </template>

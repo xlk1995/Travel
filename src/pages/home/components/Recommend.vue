@@ -2,7 +2,7 @@
   <div>
     <div class="title">猜你喜欢</div>
       <ul class="border-bottom">
-        <li class="item" v-for="item of list" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
           <img :src="item.imgUrl" class="item-img">
           <div class="item-info">
             <p class="item-title">{{item.title}}</p>
